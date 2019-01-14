@@ -1,4 +1,4 @@
-drop database  ff_shop					--ÿêùî ïåðåçàïóñêàòè êîä çíîâó òî âîíî âèäàëÿº ³ñíóþ÷ó áàçó,³ ñòâîðþº çàíàíîâî
+drop database  ff_shop					--Ã¿ÃªÃ¹Ã® Ã¯Ã¥Ã°Ã¥Ã§Ã Ã¯Ã³Ã±ÃªÃ Ã²Ã¨ ÃªÃ®Ã¤ Ã§Ã­Ã®Ã¢Ã³ Ã²Ã® Ã¢Ã®Ã­Ã® Ã¢Ã¨Ã¤Ã Ã«Ã¿Âº Â³Ã±Ã­Ã³Ã¾Ã·Ã³ Ã¡Ã Ã§Ã³,Â³ Ã±Ã²Ã¢Ã®Ã°Ã¾Âº Ã§Ã Ã­Ã Ã­Ã®Ã¢Ã®
 go	
 
 create database [ff_shop]
@@ -7,17 +7,17 @@ go
 use  [ff_shop]
 go
 
-drop table  dbo.[add_inf]				--ÿêùî ïåðåçàïóñêàòè êîä çíîâó òî âîíî âèäàëÿº ³ñíóþ÷³ òàáëèö³,³ ñòâîðþº çàíàíîâî
-drop table  dbo.[users]					--àëå âîíî òàáëèö³ ÿê³ ìàþòü çâ'ÿçí³ êëþ÷³(foreigm key) íå áóäå âèäàëÿòè áî òàê íå ìîæíà
-drop table  dbo.[products]				--òîìó ÿêùî âèíèêíå ïîìèëêà ç âèäàëåííÿì òàáëèöü òî ïðîñòî çàþçàéòå ïåðø³ 2 ðÿäî÷êà êîäó ïðî 
-drop table  dbo.[storage]				--äðîï ÁÄ
+drop table  dbo.[add_inf]				--Ã¿ÃªÃ¹Ã® Ã¯Ã¥Ã°Ã¥Ã§Ã Ã¯Ã³Ã±ÃªÃ Ã²Ã¨ ÃªÃ®Ã¤ Ã§Ã­Ã®Ã¢Ã³ Ã²Ã® Ã¢Ã®Ã­Ã® Ã¢Ã¨Ã¤Ã Ã«Ã¿Âº Â³Ã±Ã­Ã³Ã¾Ã·Â³ Ã²Ã Ã¡Ã«Ã¨Ã¶Â³,Â³ Ã±Ã²Ã¢Ã®Ã°Ã¾Âº Ã§Ã Ã­Ã Ã­Ã®Ã¢Ã®
+drop table  dbo.[users]					--Ã Ã«Ã¥ Ã¢Ã®Ã­Ã® Ã²Ã Ã¡Ã«Ã¨Ã¶Â³ Ã¿ÃªÂ³ Ã¬Ã Ã¾Ã²Ã¼ Ã§Ã¢'Ã¿Ã§Ã­Â³ ÃªÃ«Ã¾Ã·Â³(foreigm key) Ã­Ã¥ Ã¡Ã³Ã¤Ã¥ Ã¢Ã¨Ã¤Ã Ã«Ã¿Ã²Ã¨ Ã¡Ã® Ã²Ã Ãª Ã­Ã¥ Ã¬Ã®Ã¦Ã­Ã 
+drop table  dbo.[products]				--Ã²Ã®Ã¬Ã³ Ã¿ÃªÃ¹Ã® Ã¢Ã¨Ã­Ã¨ÃªÃ­Ã¥ Ã¯Ã®Ã¬Ã¨Ã«ÃªÃ  Ã§ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿Ã¬ Ã²Ã Ã¡Ã«Ã¨Ã¶Ã¼ Ã²Ã® Ã¯Ã°Ã®Ã±Ã²Ã® Ã§Ã Ã¾Ã§Ã Ã©Ã²Ã¥ Ã¯Ã¥Ã°Ã¸Â³ 2 Ã°Ã¿Ã¤Ã®Ã·ÃªÃ  ÃªÃ®Ã¤Ã³ Ã¯Ã°Ã® 
+drop table  dbo.[storage]				--Ã¤Ã°Ã®Ã¯ ÃÃ„
 drop table  dbo.[order]					--
 
 create table dbo.[add_inf](
 [id_inf] int not null primary key identity(1,1),
 [password] nvarchar(1000) not null,
 [email] nvarchar(50) not null unique(email),
-[type_of_user] nvarchar(50) not null default 'user'					--ïî äåôîëòó,íîâîãî êîðèñòóâà÷à áóäå ñòàâèòè ÿê çâè÷àéíîãî þçåðà
+[type_of_user] nvarchar(50) not null default 'user'					--Ã¯Ã® Ã¤Ã¥Ã´Ã®Ã«Ã²Ã³,Ã­Ã®Ã¢Ã®Ã£Ã® ÃªÃ®Ã°Ã¨Ã±Ã²Ã³Ã¢Ã Ã·Ã  Ã¡Ã³Ã¤Ã¥ Ã±Ã²Ã Ã¢Ã¨Ã²Ã¨ Ã¿Ãª Ã§Ã¢Ã¨Ã·Ã Ã©Ã­Ã®Ã£Ã® Ã¾Ã§Ã¥Ã°Ã 
 )
 go
 
@@ -41,7 +41,7 @@ go
 create table dbo.[storage](
 [id_s] int not null primary key identity(1,1),
 [address] nvarchar(150) not null,
-[count] int not null check ([count] >= 0),							--ê-ñòü ïðîäóêò³â íà ñêëàä³ íå ìîæå áóòè ì³íóñîâîþ (-1,-2,..) ,òîìó ñòî¿òü óìîâà ïåðåâ³ðêè 
+[count] int not null check ([count] >= 0),							--Ãª-Ã±Ã²Ã¼ Ã¯Ã°Ã®Ã¤Ã³ÃªÃ²Â³Ã¢ Ã­Ã  Ã±ÃªÃ«Ã Ã¤Â³ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥ Ã¡Ã³Ã²Ã¨ Ã¬Â³Ã­Ã³Ã±Ã®Ã¢Ã®Ã¾ (-1,-2,..) ,Ã²Ã®Ã¬Ã³ Ã±Ã²Ã®Â¿Ã²Ã¼ Ã³Ã¬Ã®Ã¢Ã  Ã¯Ã¥Ã°Ã¥Ã¢Â³Ã°ÃªÃ¨ 
 [id_p] int not null foreign key references dbo.[products]([id_p])
 )
 go
@@ -51,8 +51,9 @@ create table dbo.[order](
 [surname] nvarchar(50) not null,
 [name] nvarchar(50) not null,
 [product_name] nvarchar(150) not null,
-[count] int not null check ([count] >=1),						--êîëè þçåð ðîáèòü çàìîâäåííÿ òî â³äïîâ³äíî ê-ñòü òîâàðó íå ìîæå áóòè òàêîæ ì³íóñîâîþ àáî 0,òîìó òàêîæ ñòî¿òü óìîâà ïåðåâ³ðêè
+[count] int not null check ([count] >=1),						--ÃªÃ®Ã«Ã¨ Ã¾Ã§Ã¥Ã° Ã°Ã®Ã¡Ã¨Ã²Ã¼ Ã§Ã Ã¬Ã®Ã¢Ã¤Ã¥Ã­Ã­Ã¿ Ã²Ã® Ã¢Â³Ã¤Ã¯Ã®Ã¢Â³Ã¤Ã­Ã® Ãª-Ã±Ã²Ã¼ Ã²Ã®Ã¢Ã Ã°Ã³ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥ Ã¡Ã³Ã²Ã¨ Ã²Ã ÃªÃ®Ã¦ Ã¬Â³Ã­Ã³Ã±Ã®Ã¢Ã®Ã¾ Ã Ã¡Ã® 0,Ã²Ã®Ã¬Ã³ Ã²Ã ÃªÃ®Ã¦ Ã±Ã²Ã®Â¿Ã²Ã¼ Ã³Ã¬Ã®Ã¢Ã  Ã¯Ã¥Ã°Ã¥Ã¢Â³Ã°ÃªÃ¨
 [price] decimal(10,2) not null,
+[total] as [count]*[price],
 [From] nvarchar(150) not null,
 [To] nvarchar(150) not null,
 [date_of_order] datetime not null,
